@@ -86,8 +86,8 @@ export const ParticlesBackground = () => {
 
     // Animation loop
     const animate = () => {
-      ctx.fillStyle = "rgba(26, 27, 38, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Clear canvas instead of adding overlay
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
       particles.forEach((particle) => {
